@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fabkart Pricing — Transparent Rates, Premium Care</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Scoped additions for this page */
+
+    .pricing-hero {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border-top: 2px solid var(--light-mint-green);
+      border-bottom: 2px solid var(--light-mint-green);
+      padding: 80px 0 60px;
+    }
+    .pricing-hero .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .pricing-hero h1 { color: var(--deep-green); font-size: 2.3rem; font-weight: 800; }
+    .pricing-hero h1::after { content:''; display:block; width:110px; height:4px; background: var(--bright-yellow); border-radius:2px; margin-top:12px; }
+    .pricing-hero p { color: var(--medium-gray); margin-top: 10px; max-width: 880px; }
+
+    .pricing-tabs { display:flex; gap:10px; flex-wrap:wrap; margin: 18px 0 8px; }
+    .chip {
+      background: rgba(0,94,58,.08); color: var(--deep-green);
+      border:1px solid rgba(0,94,58,.15); border-radius:999px;
+      padding:8px 14px; font-weight:700; cursor:pointer; transition: all .25s ease;
+    }
+    .chip:hover { background: rgba(0,94,58,.14); }
+    .chip.active { background: var(--bright-yellow); color: var(--deep-green); border-color: transparent; }
+
+    .pricing-wrap { background:#fff; padding: 40px 0 80px; }
+    .pricing-wrap .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    .pricing-grid {
+      display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px;
+    }
+
+    .price-card {
+      background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      position: relative;
+    }
+    .price-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,94,58,.12); border-color: rgba(0,94,58,.18); }
+    .card-topline { position:absolute; top:0; left:0; width:100%; height:5px; background: linear-gradient(90deg,#005E3A 0%, #FECF33 100%); }
+
+    .price-photo { aspect-ratio: 4/3; background:#f6f7f8; display:grid; place-items:center; }
+    .price-photo img { width:100%; height:100%; object-fit: cover; display:block; }
+
+    .price-info { padding: 14px; }
+    .price-info h3 { color: var(--deep-green); font-size: 1.02rem; margin-bottom: 4px; }
+    .price { color: var(--deep-green); font-weight: 800; font-size: 1.2rem; }
+    .svc { color: var(--medium-gray); font-size: .95rem; }
+
+    .pricing-note { text-align:center; color: var(--medium-gray); margin-top: 12px; }
+    .pricing-cta { display:flex; justify-content:center; gap:10px; margin-top: 16px; }
+
+    /* Button fallbacks (if not already in your global CSS) */
+    .btn-solid {
+      display:inline-flex; align-items:center; gap:10px; padding:12px 22px; border-radius:999px;
+      font-weight:700; text-decoration:none; border:none;
+      background:linear-gradient(90deg,#005E3A 0%, #008a65 100%); color:#fff;
+      box-shadow:0 8px 24px rgba(0,94,58,.25); transition: transform .25s, box-shadow .25s;
+    }
+    .btn-solid:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,94,58,.35); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:10px; padding:11px 20px; border-radius:999px; font-weight:700; text-decoration:none;
+      border:2px solid var(--muted-teal); color: var(--muted-teal); background:#fff; transition: background .25s, color .25s, transform .25s;
+    }
+    .btn-outline:hover { background: var(--muted-teal); color:#fff; transform: translateY(-2px); }
+
+    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+    @media (max-width: 768px)  {
+      .pricing-hero { padding: 60px 0 40px; }
+      .pricing-hero h1 { font-size: 2rem; }
+      .pricing-wrap { padding: 30px 0 60px; }
+      .pricing-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 576px) { .pricing-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- Shared header (replace with your include if you have partials) -->
+<header class="main-header">
+        <div class="header-container">
+            <!-- Logo with Image -->
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Fabkart" class="logo-img">
+                    <div class="logo-text-container">
+                        <h1 class="logo-text">
+                            <span class="logo-fab">Fab</span><span class="logo-kart">kart</span>
+                        </h1>
+                        <p class="tagline">Where Every Fabric Finds Its Perfect Care</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation with Icons -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-concierge-bell nav-icon"></i>
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="services.html"><i class="fas fa-tshirt"></i> Dry Cleaning</a>
+                            <a href="services.html"><i class="fas fa-soap"></i> Laundry</a>
+                            <a href="services.html"><i class="fas fa-fan"></i> Saree Roll Press</a>
+                            <a href="services.html"><i class="fas fa-rug"></i> Carpet Cleaning</a>
+                            <a href="services.html"><i class="fas fa-cut"></i> Alterations</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html#how-it-works" class="nav-link">
+                            <i class="fas fa-cogs nav-icon"></i>
+                            <span>How It Works</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class="nav-link">
+                            <i class="fas fa-tags nav-icon"></i>
+                            <span>Pricing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="why us.html" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span>Why Fabkart</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="footer.html#contact" class="nav-link">
+                            <i class="fas fa-phone-alt nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <button class="btn-primary">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Schedule Pickup</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Add this right after your navigation in index.html -->
+    
+    </header>
+  <!-- Hero -->
+  <section class="pricing-hero">
+    <div class="container">
+      <h1>Pricing</h1>
+      <p>Transparent rates with premium fabric care. Filter by category. Images are representative; final pricing may vary by fabric, size, and detailing.</p>
+
+      <div class="pricing-tabs" role="tablist">
+        <button class="chip active" data-cat="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-cat="garments" role="tab" aria-selected="false">Garments</button>
+        <button class="chip" data-cat="laundry" role="tab" aria-selected="false">Laundry</button>
+        <button class="chip" data-cat="leather" role="tab" aria-selected="false">Leather</button>
+        <button class="chip" data-cat="footwear" role="tab" aria-selected="false">Footwear</button>
+        <button class="chip" data-cat="home" role="tab" aria-selected="false">Household</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="pricing-wrap">
+    <div class="container">
+      <div class="pricing-grid">
+
+        <!-- ==== START: GARMENTS (Men/Women/Kids) ==== -->
+
+        <!-- MEN -->
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1200&q=80&auto=format&fit=crop" alt="Formal Shirt">
+          </div>
+          <div class="price-info">
+            <h3>Formal Shirt</h3>
+            <p class="price">₹149</p>
+            <p class="svc">Steam Press / Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1542060748-10c28b62716c?w=1200&q=80&auto=format&fit=crop" alt="Two-Piece Suit">
+          </div>
+          <div class="price-info">
+            <h3>Two‑Piece Suit</h3>
+            <p class="price">₹599</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1520975867597-0f6f44d7e3c5?w=1200&q=80&auto=format&fit=crop" alt="3-Piece Suit">
+          </div>
+          <div class="price-info">
+            <h3>3‑Piece Suit</h3>
+            <p class="price">₹749</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=1200&q=80&auto=format&fit=crop" alt="Blazer">
+          </div>
+          <div class="price-info">
+            <h3>Blazer/Jacket</h3>
+            <p class="price">₹349</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=1200&q=80&auto=format&fit=crop" alt="Sherwani">
+          </div>
+          <div class="price-info">
+            <h3>Sherwani (Medium Work)</h3>
+            <p class="price">₹495</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1548883354-aa96e8d5b06f?w=1200&q=80&auto=format&fit=crop" alt="Woolen Sweater">
+          </div>
+          <div class="price-info">
+            <h3>Woolen Sweater</h3>
+            <p class="price">₹149</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1604937455095-efb4e9c6f2e0?w=1200&q=80&auto=format&fit=crop" alt="Dhoti Kurta">
+          </div>
+          <div class="price-info">
+            <h3>Dhoti–Kurta</h3>
+            <p class="price">₹225</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <!-- WOMEN -->
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1577452022204-3a50b0f0d2cf?w=1200&q=80&auto=format&fit=crop" alt="Silk Saree">
+          </div>
+          <div class="price-info">
+            <h3>Silk Saree</h3>
+            <p class="price">₹349</p>
+            <p class="svc">Roll Press &amp; Polish</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1520975680470-74b6a567a8a8?w=1200&q=80&auto=format&fit=crop" alt="Cotton Saree">
+          </div>
+          <div class="price-info">
+            <h3>Cotton Saree</h3>
+            <p class="price">₹249</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1593032457860-0a5e9c1e2c63?w=1200&q=80&auto=format&fit=crop" alt="Lehenga">
+          </div>
+          <div class="price-info">
+            <h3>Lehenga (Light Work)</h3>
+            <p class="price">₹699</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1603575448745-3e2c2f7d7d9e?w=1200&q=80&auto=format&fit=crop" alt="Gown">
+          </div>
+          <div class="price-info">
+            <h3>Gown / Ethnic Dress</h3>
+            <p class="price">₹399</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1615208429551-2d1b4d0c034b?w=1200&q=80&auto=format&fit=crop" alt="Blouse">
+          </div>
+          <div class="price-info">
+            <h3>Blouse</h3>
+            <p class="price">₹129</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=80&auto=format&fit=crop#dupatta" alt="Dupatta">
+          </div>
+          <div class="price-info">
+            <h3>Dupatta / Stole</h3>
+            <p class="price">₹99</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <!-- KIDS -->
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9b?w=1200&q=80&auto=format&fit=crop" alt="Kids Dress">
+          </div>
+          <div class="price-info">
+            <h3>Kids Dress</h3>
+            <p class="price">₹199</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=1200&q=80&auto=format&fit=crop" alt="Kids Top">
+          </div>
+          <div class="price-info">
+            <h3>Kids Top / Bottom</h3>
+            <p class="price">₹99</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="garments">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1548883354-aa96e8d5b06f?w=1200&q=80&auto=format&fit=crop#kidsjacket" alt="Kids Jacket">
+          </div>
+          <div class="price-info">
+            <h3>Kids Jacket</h3>
+            <p class="price">₹179</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <!-- ==== END: GARMENTS ==== -->
+
+        <!-- ==== LAUNDRY ==== -->
+        <article class="price-card" data-cat="laundry">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=80&auto=format&fit=crop" alt="T-Shirt">
+          </div>
+          <div class="price-info">
+            <h3>T‑Shirt</h3>
+            <p class="price">₹79</p>
+            <p class="svc">Premium Laundry</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="laundry">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1592878904946-b3cd5b95f16a?w=1200&q=80&auto=format&fit=crop" alt="Linen Trousers">
+          </div>
+          <div class="price-info">
+            <h3>Linen Trousers</h3>
+            <p class="price">₹129</p>
+            <p class="svc">Premium Laundry</p>
+          </div>
+        </article>
+
+        <!-- ==== LEATHER CARE (GARMENTS/BAGS) ==== -->
+        <article class="price-card" data-cat="leather">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=1200&q=80&auto=format&fit=crop" alt="Leather Jacket">
+          </div>
+          <div class="price-info">
+            <h3>Leather Jacket</h3>
+            <p class="price">₹899</p>
+            <p class="svc">Leather Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="leather">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1520975922292-6c56a7126a56?w=1200&q=80&auto=format&fit=crop" alt="Leather Handbag">
+          </div>
+          <div class="price-info">
+            <h3>Leather Handbag</h3>
+            <p class="price">₹549</p>
+            <p class="svc">Bag Cleaning</p>
+          </div>
+        </article>
+
+        <!-- ==== FOOTWEAR ==== -->
+        <article class="price-card" data-cat="footwear">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80&auto=format&fit=crop" alt="Sneakers">
+          </div>
+          <div class="price-info">
+            <h3>Sneakers</h3>
+            <p class="price">₹399</p>
+            <p class="svc">Deep Clean + Deodorize</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="footwear">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?w=1200&q=80&auto=format&fit=crop" alt="Leather Boots">
+          </div>
+          <div class="price-info">
+            <h3>Boots</h3>
+            <p class="price">₹499</p>
+            <p class="svc">Clean + Condition</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="footwear">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1520975680470-74b6a567a8a8?w=1200&q=80&auto=format&fit=crop#heels" alt="Heels">
+          </div>
+          <div class="price-info">
+            <h3>Heels</h3>
+            <p class="price">₹349</p>
+            <p class="svc">Clean + Deodorize</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="footwear">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1582582429416-1f1e9e19794c?w=1200&q=80&auto=format&fit=crop#kids-sneakers" alt="Kids Sneakers">
+          </div>
+          <div class="price-info">
+            <h3>Kids Sneakers</h3>
+            <p class="price">₹299</p>
+            <p class="svc">Deep Clean</p>
+          </div>
+        </article>
+
+        <!-- ==== HOUSEHOLD ==== -->
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80&auto=format&fit=crop" alt="Bed Sheet Single">
+          </div>
+          <div class="price-info">
+            <h3>Bed Sheet (Single)</h3>
+            <p class="price">₹145</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=80&auto=format&fit=crop" alt="Bed Sheet Double">
+          </div>
+          <div class="price-info">
+            <h3>Bed Sheet (Double)</h3>
+            <p class="price">₹195</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=80&auto=format&fit=crop" alt="Bed Spread Double">
+          </div>
+          <div class="price-info">
+            <h3>Bed Spread (Double)</h3>
+            <p class="price">₹295</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1543486958-d783bfbf6510?w=1200&q=80&auto=format&fit=crop" alt="Blanket">
+          </div>
+          <div class="price-info">
+            <h3>Blanket / Quilt</h3>
+            <p class="price">₹299</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?w=1200&q=80&auto=format&fit=crop" alt="Sofa Cushion Cover">
+          </div>
+          <div class="price-info">
+            <h3>Sofa Cushion Cover</h3>
+            <p class="price">₹79</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=80&auto=format&fit=crop#blinds" alt="Door Blinds">
+          </div>
+          <div class="price-info">
+            <h3>Blinds (Door)</h3>
+            <p class="price">₹275</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+        <article class="price-card" data-cat="home">
+          <div class="card-topline"></div>
+          <div class="price-photo">
+            <img src="https://images.unsplash.com/photo-1582582429416-1f1e9e19794c?w=1200&q=80&auto=format&fit=crop" alt="Chair Cover">
+          </div>
+          <div class="price-info">
+            <h3>Chair Cover</h3>
+            <p class="price">₹120</p>
+            <p class="svc">Dry Clean</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="pricing-note">
+        <p>Prices are indicative and may vary by fabric, size, embellishments, and service selection. Taxes extra.</p>
+      </div>
+
+      <div class="pricing-cta">
+        <a href="#book" class="btn-solid">Book Pickup</a>
+        <a href="services.html" class="btn-outline">See All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared footer (replace with your include if you have partials) -->
+  <footer class="fabkart-footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>© Fabkart. Curating time for what matters most.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer src="main.js"></script>
+  <script>
+    // Filters + reveal animation
+    (function() {
+      const grid = document.querySelector('.pricing-grid');
+      if (!grid) return;
+
+      const tabs = document.querySelectorAll('.pricing-tabs .chip');
+      const cards = grid.querySelectorAll('.price-card');
+
+      function apply(cat) {
+        cards.forEach(card => {
+          const show = (cat === 'all') || card.dataset.cat === cat;
+          card.style.display = show ? '' : 'none';
+        });
+      }
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          apply(tab.dataset.cat);
+        });
+      });
+      (tabs[0] || {}).click?.();
+
+      // Soft reveal
+      cards.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(12px)'; });
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.transition = 'opacity 600ms ease, transform 600ms ease';
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      cards.forEach(el => obs.observe(el));
+    })();
+  </script>
+  <div id="footer-placeholder"></div>
+
+<script>
+  // Load footer dynamically
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</body>
+</html>

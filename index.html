@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabkart - Where Every Fabric Finds Its Perfect Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Full-width Edge-to-Edge Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo with Image -->
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Fabkart" class="logo-img">
+                    <div class="logo-text-container">
+                        <h1 class="logo-text">
+                            <span class="logo-fab">Fab</span><span class="logo-kart">kart</span>
+                        </h1>
+                        <p class="tagline">Where Every Fabric Finds Its Perfect Care</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation with Icons -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-concierge-bell nav-icon"></i>
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="services.html"><i class="fas fa-tshirt"></i> Dry Cleaning</a>
+                            <a href="services.html"><i class="fas fa-soap"></i> Laundry</a>
+                            <a href="services.html"><i class="fas fa-fan"></i> Saree Roll Press</a>
+                            <a href="services.html"><i class="fas fa-rug"></i> Carpet Cleaning</a>
+                            <a href="services.html"><i class="fas fa-cut"></i> Alterations</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html#how-it-works" class="nav-link">
+                            <i class="fas fa-cogs nav-icon"></i>
+                            <span>How It Works</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class="nav-link">
+                            <i class="fas fa-tags nav-icon"></i>
+                            <span>Pricing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="why us.html" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span>Why Fabkart</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="footer.html#contact" class="nav-link">
+                            <i class="fas fa-phone-alt nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <button class="btn-primary">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Schedule Pickup</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Add this right after your navigation in index.html -->
+    
+    </header>
+
+    <section class="fabkart-slider">
+    <div class="slider-container">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: linear-gradient(rgba(0, 94, 58, 0.2), rgba(0, 94, 58, 0.2)), url('img/slider.png')">
+            <div class="slide-content">
+                <h2>Premium Dry Cleaning Services</h2>
+                <p>Expert care for your finest garments</p>
+                <a href="#book" class="btn btn-slider">Book Now</a>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: linear-gradient(rgba(0, 94, 58, 0.2), rgba(0, 94, 58, 0.2)), url('img/slider.png')">
+            <div class="slide-content">
+                <h2>Leather & Suede Care</h2>
+                <p>Specialized cleaning for delicate materials</p>
+                <a href="#book" class="btn btn-slider">Book Now</a>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: linear-gradient(rgba(0, 94, 58, 0.2), rgba(0, 94, 58, 0.2)), url('img/slider.png')">
+            <div class="slide-content">
+                <h2>Eco-Friendly Fabric Care</h2>
+                <p>Gentle on clothes, kind to the environment</p>
+                <a href="#book" class="btn btn-slider">Book Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slider-nav">
+        <div class="slider-dot active"></div>
+        <div class="slider-dot"></div>
+        <div class="slider-dot"></div>
+    </div>
+</section>
+<!-- Add this after the slider section -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Three Steps to Immaculate Care</h2>
+      <p class="section-subtitle">Experience premium fabric care with our seamless process</p>
+    </div>
+
+    <div class="steps-container">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-visual">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <img src="img/favicon.png" alt="Booking icon" class="step-svg">
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Book Your Fabkart Experience</h3>
+          <p>Choose services via app, website, or concierge call.</p>
+          <div class="step-highlight"></div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-visual">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <img src="img/favicon.png" alt="Pickup icon" class="step-svg">
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>We Collect, You Relax</h3>
+          <p>Free doorstep pickup in eco-luxe totes. Specify fragile or urgent items.</p>
+          <div class="step-highlight"></div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-visual">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <img src="img/favicon.png" alt="Delivery icon" class="step-svg">
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Delivered to Delight</h3>
+          <p>Professionally cared-for items returned in 24–48 hours.</p>
+          <div class="step-highlight"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta-container">
+      <a href="#book" class="cta-button">
+        <span>Book Now</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 6-Stage Garment Care Process -->
+<section class="six-stage" id="process-6">
+  <div class="container">
+    <div class="six-header">
+      <h2>6‑Stage Garment Care Process</h2>
+      <p class="six-sub">Unmatched Fabric Care. <span class="sep">|</span> Trusted by Thousands.</p>
+    </div>
+
+    <ol class="six-list">
+      <li class="six-item">
+        <div class="six-num">1</div>
+        <div class="six-content">
+          <h3>Fabric &amp; Stain Inspection</h3>
+          <p>Inspected by fabric type, stain location &amp; type, existing damage or wear, colorfastness &amp; washability.</p>
+        </div>
+      </li>
+
+      <li class="six-item">
+        <div class="six-num">2</div>
+        <div class="six-content">
+          <h3>Pre‑Treatment &amp; Spotting</h3>
+          <p>Fabric‑safe spotting chemicals and stain‑specific techniques.</p>
+        </div>
+      </li>
+
+      <li class="six-item">
+        <div class="six-num">3</div>
+        <div class="six-content">
+          <h3>Fabric‑Specific Cleaning</h3>
+          <p>pH‑balanced water, eco‑friendly detergents, and custom wash cycles.</p>
+        </div>
+      </li>
+
+      <li class="six-item">
+        <div class="six-num">4</div>
+        <div class="six-content">
+          <h3>Sanitization &amp; Hygiene Control</h3>
+          <p>UV‑sanitized, temperature‑controlled, zero cross‑contamination protocols.</p>
+        </div>
+      </li>
+
+      <li class="six-item">
+        <div class="six-num">5</div>
+        <div class="six-content">
+          <h3>Finishing &amp; Steam Iron</h3>
+          <p>Crisp, fresh, and wearable finish.</p>
+        </div>
+      </li>
+
+      <li class="six-item">
+        <div class="six-num">6</div>
+        <div class="six-content">
+          <h3>Final QC &amp; Premium Packaging</h3>
+          <p>Final quality check, neatly folded or hung and packed in Fabkart’s signature breathable covers.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="six-cta">
+      <a href="#book" class="btn-solid" aria-label="Book Fabkart Pickup">Book Pickup</a>
+      <a href="services.html" class="btn-outline" aria-label="Explore Fabkart Services">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Fabkart Lifestyle Value Block -->
+<section class="lifestyle-value">
+  <div class="value-header">
+    <h2>Adding Leisure & Value to Your Daily Life</h2>
+    <p>
+      At Fabkart, we believe luxury isn't just about what you own — it's about the time and peace of mind we give back to you.
+      Our services transform the chore of laundry into moments of freedom, allowing you to focus on what truly matters in life.
+    </p>
+  </div>
+
+  <div class="value-columns">
+    <!-- Lifestyle Advantage -->
+    <div class="value-card">
+      <div class="card-badge">The Fabkart Lifestyle Advantage</div>
+
+      <div class="value-item">
+        <div class="value-icon">⏰</div>
+        <div>
+          <h3>Time Freedom</h3>
+          <p>Every hour saved from laundry = an hour gained for:</p>
+          <ul class="ticks">
+            <li>☕ Morning coffee in peace</li>
+            <li>📖 That book you've been meaning to read</li>
+            <li>👨‍👩‍👧‍👦 Quality time with loved ones</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">🧘‍♀️</div>
+        <div>
+          <h3>Stress-Free Living</h3>
+          <p>No more:</p>
+          <ul class="cross">
+            <li>❗ Last-minute ironing before important meetings</li>
+            <li>❗ Worrying about delicate fabrics</li>
+            <li>❗ Hassle of detergent shopping</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">🌿</div>
+        <div>
+          <h3>Elevated Daily Experiences</h3>
+          <ul class="dashes">
+            <li><strong>Aromatherapy Finishes</strong>: Start your day with freshly laundered sheets in calming lavender or invigorating citrus</li>
+            <li><strong>Special Occasion Ready</strong>: Impeccably cleaned outfits always prepared for spontaneous events</li>
+            <li><strong>Closet Serenity</strong>: A well-maintained wardrobe that sparks joy every morning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Psychology & Impact -->
+    <div class="value-card emphasis">
+      <div class="card-badge alt">The Psychology of Leisure Laundry</div>
+
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number">78%</div>
+          <div class="stat-note">Urban Indians dislike laundry the most</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">8h</div>
+          <div class="stat-note">Average weekly time spent on laundry</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">92%</div>
+          <div class="stat-note">Fabkart customers report improved life satisfaction</div>
+        </div>
+      </div>
+
+      <p class="impact">
+        Our service isn't just about cleaning — it's about <strong>reclaiming 50+ hours annually</strong> for passions and relationships.
+      </p>
+
+      <div class="benefits">
+        <div class="benefit">
+          <span class="benefit-icon">🔹</span>
+          <span>Add <strong>2+ hours</strong> to weekly leisure time</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">🔹</span>
+          <span>Reduce household stress by <strong>40%</strong></span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">🔹</span>
+          <span>Elevate daily living with premium fabric care</span>
+        </div>
+      </div>
+
+      <div class="cta-inline">
+        <a href="#book" class="cta-button" aria-label="Book Now with Fabkart">
+          Book Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <p class="cta-tagline">Fabkart — Curating time for what matters most</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fabkart Membership Section -->
+<section class="fab-membership" id="membership">
+  <div class="container">
+    <div class="mem-hero">
+      <span class="mem-chip">Fabkart Membership</span>
+      <h2>Take back your time — we’ll handle the laundry</h2>
+      <p class="mem-sub">It’s better as a member. More care. More savings. More Fab.</p>
+      <p class="mem-intro">
+        Become a Fabkart Member and unlock exclusive privileges that make every laundry
+        experience faster, more affordable, and exceptionally rewarding.
+      </p>
+     
+    </div>
+
+    <!-- Benefits -->
+    <div class="mem-grid">
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">💸</div>
+        <h3>Exclusive Discounts</h3>
+        <p>Enjoy up to 20% off on all services — from leather care to dry cleaning and more.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">🚚</div>
+        <h3>Free Pickup & Delivery</h3>
+        <p>Complimentary doorstep pickup and delivery, every time.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">⚡</div>
+        <h3>Priority Processing</h3>
+        <p>Skip the queue — members enjoy faster turnaround on every order.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">🎁</div>
+        <h3>Earn Reward Points</h3>
+        <p>Collect points on every order and redeem for free services or upgrades.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">🏷️</div>
+        <h3>Member‑Only Offers</h3>
+        <p>Seasonal deals, surprise gifts, and bonus coupons — just for members.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">🤝</div>
+        <h3>VIP Support</h3>
+        <p>Priority access to our dedicated support team for quick, friendly help.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">🧪</div>
+        <h3>Early Access</h3>
+        <p>Be first to try new services, technologies, and limited‑time offers.</p>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-topline"></div>
+        <div class="mem-icon">🔔</div>
+        <h3>Smart Tracking</h3>
+        <p>Real‑time updates, express rescheduling, and tailored service reminders.</p>
+      </article>
+    </div>
+
+    <!-- Value band -->
+    <div class="mem-highlight">
+      <p><strong>Start enjoying the Fab life today.</strong> Whether a weekly washer or seasonal stacker, Fabkart Membership is designed to save time, money, and effort — while delivering luxury‑level care.</p>
+    </div>
+
+    <!-- CTA repeat -->
+    <div class="mem-cta mem-cta-bottom">
+      <a href="#join" class="btn-solid">Join Now</a>
+      <a href="#contact" class="btn-outline">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+<!-- Fabkart FAQ / Q&A (Controlled Accordion) -->
+<section class="fabkart-faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <h2>Know More About Fabkart <span class="thin">[Q&amp;A]</span></h2>
+      <p class="faq-sub">Premium laundry and fabric care — convenient, careful, and consistently exceptional.</p>
+    </div>
+
+    <div class="faq-grid" role="list">
+      <!-- 1 -->
+      <article class="faq-card" role="listitem" data-open="true">
+        <div class="faq-head">
+          <h3 class="faq-title">What is Fabkart?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="true" aria-controls="faq-1" title="Toggle answer">–</button>
+        </div>
+        <div class="faq-body" id="faq-1">
+          <p>Fabkart is a premium laundry and fabric care brand offering services like dry cleaning, leather care, shoe cleaning, saree roll press, curtain cleaning, and more — with convenient doorstep pickup and delivery.</p>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">Where is Fabkart available?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-2" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-2" hidden>
+          <p>We currently serve customers in Bangalore. Check availability by entering your PIN code on our website or app.</p>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">How do I place an order?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-3" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-3" hidden>
+          <ul class="faq-list">
+            <li>Mobile app</li>
+            <li>Website: www.fabkart.co.in</li>
+            <li>Call or WhatsApp: +91 6363 644 844</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">How is Fabkart different from local laundries?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-4" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-4" hidden>
+          <p>We use a 6‑stage garment care process including fabric inspection, pre‑treatment, fabric‑specific cleaning, and UV sanitization — handled by trained professionals using eco‑friendly detergents.</p>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">Do you separate clothes by type or wash them together?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-5" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-5" hidden>
+          <p>Absolutely. Every order is processed separately, and clothes are categorized by color, fabric, and service type to ensure hygiene and fabric safety.</p>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">What items do you clean?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-6" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-6" hidden>
+          <ul class="faq-list">
+            <li>Clothes (daily wear, formal, ethnic, designer)</li>
+            <li>Shoes, bags, and leather items</li>
+            <li>Sarees (roll press &amp; polish)</li>
+            <li>Curtains, carpets, quilts, and blankets</li>
+            <li>Soft toys and more</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">How long does it take to get my clothes back?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-7" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-7" hidden>
+          <p>Standard turnaround is 24–48 hours depending on the service. Express Delivery (within 24 hours) is available for selected items and locations.</p>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">Do you remove all stains?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-8" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-8" hidden>
+          <p>We have an excellent success rate with most stains. Results depend on the fabric, how long the stain has been present, and any previous treatment. We always use safe, non‑damaging methods.</p>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">How much does it cost?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-9" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-9" hidden>
+          <p>Our pricing is transparent and varies based on service and item. View the full rate card in the app or on the website.</p>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">How do I pay?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-10" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-10" hidden>
+          <p>Pay via UPI, credit/debit cards, wallets, or cash on delivery. In‑app payments are available after order confirmation.</p>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">What is the Fabkart Membership Plan?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-11" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-11" hidden>
+          <ul class="faq-list">
+            <li>Exclusive discounts</li>
+            <li>Free pickup &amp; delivery</li>
+            <li>Reward points</li>
+            <li>Faster service &amp; VIP support</li>
+          </ul>
+          <p>Perfect for frequent users who want convenience and savings.</p>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">How can I apply promo codes?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-12" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-12" hidden>
+          <p>Enter promo codes at checkout on the app or share them with the pickup executive during manual bookings.</p>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">Is my data safe with Fabkart?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-13" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-13" hidden>
+          <p>Yes. We use secure servers and encrypted systems. Your personal information is never shared with third parties for marketing.</p>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article class="faq-card" role="listitem" data-open="false">
+        <div class="faq-head">
+          <h3 class="faq-title">What if I have a complaint or issue?</h3>
+          <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-14" title="Toggle answer">+</button>
+        </div>
+        <div class="faq-body" id="faq-14" hidden>
+          <p>Contact customer care:</p>
+          <ul class="faq-list">
+            <li>Phone: +91 6363 644 844</li>
+            <li>Email: support@fabkart.co.in</li>
+          </ul>
+          <p>We take all feedback seriously and aim for a 100% satisfaction rate.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- CTA band -->
+    <div class="faq-cta">
+      <p>Have a question not listed here?</p>
+      <div class="faq-cta-buttons">
+        <a href="#contact" class="btn-solid">Contact Us</a>
+        <a href="#support" class="btn-outline">Chat with Support</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Voices of Trust -->
+<section class="voices-of-trust" id="testimonials">
+  <div class="container">
+    <div class="voices-header">
+      <h2>Voices of Trust</h2>
+      <p class="voices-sub">Real experiences. Real care. Results you can feel.</p>
+    </div>
+
+    <div class="voices-grid" aria-label="Customer testimonials">
+      <!-- 1 -->
+      <figure class="voice-card">
+        <div class="voice-topline"></div>
+        <div class="voice-quote">“Fabkart’s saree rolling is magic! My Kanjeevarams look like they’re fresh from the weaver.”</div>
+        <figcaption class="voice-author">
+          <span class="voice-name">Priya M.</span>
+          <span class="voice-role">Classical Dancer</span>
+        </figcaption>
+      </figure>
+
+      <!-- 2 -->
+      <figure class="voice-card">
+        <div class="voice-topline"></div>
+        <div class="voice-quote">“Their carpet cleaning transformed my living room. Even my allergist noticed the difference!”</div>
+        <figcaption class="voice-author">
+          <span class="voice-name">James L.</span>
+          <span class="voice-role">Interior Designer</span>
+        </figcaption>
+      </figure>
+
+      <!-- 3 -->
+      <figure class="voice-card">
+        <div class="voice-topline"></div>
+        <div class="voice-quote">“I trust them with my toddler’s stuffed toys. Safe, swift, and so convenient.”</div>
+        <figcaption class="voice-author">
+          <span class="voice-name">Anika S.</span>
+          <span class="voice-role">Busy Mom</span>
+        </figcaption>
+      </figure>
+
+      <!-- 4 -->
+      <figure class="voice-card">
+        <div class="voice-topline"></div>
+        <div class="voice-quote">“Fabkart brought my old leather jacket back to life — it looks brand new!”</div>
+        <figcaption class="voice-author">
+          <span class="voice-name">Akhil</span>
+          <span class="voice-role">Software Employee</span>
+        </figcaption>
+      </figure>
+
+      <!-- 5 -->
+      <figure class="voice-card">
+        <div class="voice-topline"></div>
+        <div class="voice-quote">“Impeccable dry cleaning! My formal wear has never looked this crisp and fresh.”</div>
+        <figcaption class="voice-author">
+          <span class="voice-name">Sravani</span>
+          <span class="voice-role">Business Owner</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="logo.png" alt="Fabkart" class="mobile-logo-img">
+            <button class="close-mobile-menu" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>Services</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#"><i class="fas fa-tshirt"></i> Dry Cleaning</a>
+                    <a href="#"><i class="fas fa-soap"></i> Laundry</a>
+                    <a href="#"><i class="fas fa-fan"></i> Saree Roll Press</a>
+                    <a href="#"><i class="fas fa-rug"></i> Carpet Cleaning</a>
+                    <a href="#"><i class="fas fa-cut"></i> Alterations</a>
+                </div>
+            </div>
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-cogs"></i>
+                <span>How It Works</span>
+            </a>
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-tags"></i>
+                <span>Pricing</span>
+            </a>
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-star"></i>
+                <span>Why Fabkart</span>
+            </a>
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-phone-alt"></i>
+                <span>Contact</span>
+            </a>
+            <div class="mobile-menu-actions">
+                <button class="btn-primary mobile-book-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Schedule Pickup</span>
+                </button>
+                <div class="mobile-contact-info">
+                    <p><i class="fas fa-phone"></i> +91-XXXX-XXXX-XX</p>
+                    <p><i class="fas fa-envelope"></i> support@fabkart.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+<!-- Footer will be inserted here -->
+<div id="footer-placeholder"></div>
+
+<script>
+  // Load footer dynamically
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</html>

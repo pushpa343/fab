@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fabkart Services — Experience Fabric Care at Its Finest</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo with Image -->
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Fabkart" class="logo-img">
+                    <div class="logo-text-container">
+                        <h1 class="logo-text">
+                            <span class="logo-fab">Fab</span><span class="logo-kart">kart</span>
+                        </h1>
+                        <p class="tagline">Where Every Fabric Finds Its Perfect Care</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation with Icons -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-concierge-bell nav-icon"></i>
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="services.html"><i class="fas fa-tshirt"></i> Dry Cleaning</a>
+                            <a href="services.html"><i class="fas fa-soap"></i> Laundry</a>
+                            <a href="services.html"><i class="fas fa-fan"></i> Saree Roll Press</a>
+                            <a href="services.html"><i class="fas fa-rug"></i> Carpet Cleaning</a>
+                            <a href="services.html"><i class="fas fa-cut"></i> Alterations</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html#how-it-works" class="nav-link">
+                            <i class="fas fa-cogs nav-icon"></i>
+                            <span>How It Works</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class="nav-link">
+                            <i class="fas fa-tags nav-icon"></i>
+                            <span>Pricing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="why us.html" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span>Why Fabkart</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="footer.html#contact" class="nav-link">
+                            <i class="fas fa-phone-alt nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <button class="btn-primary">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Schedule Pickup</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Add this right after your navigation in index.html -->
+    
+    </header>
+
+
+  <!-- Page Hero -->
+  <section class="services-hero">
+    <div class="container">
+      <h1>Services: Experience Fabric Care at Its Finest</h1>
+      <p>
+        At Fabkart, we don’t just clean clothes — we preserve garments, restore freshness, and elevate your wardrobe with professional precision.
+        Our premium-grade equipment, fabric-specific processes, and skilled garment experts ensure your clothing and household fabrics are returned in flawless condition.
+      </p>
+    </div>
+  </section>
+
+  
+  <!-- Services Grid -->
+  <section class="services-grid-section">
+    <div class="container services-grid">
+
+      <!-- 1 Dry Cleaning -->
+      <article class="service-card" data-cat="garments">
+        <div class="service-topline"></div>
+        <div class="service-icon">🧴</div>
+        <h3>Dry Cleaning</h3>
+        <h4>Gentle. Detailed. Perfectly Finished.</h4>
+        <p>
+          International-grade solvents and advanced spotting techniques for suits, dresses, delicates, and designer garments —
+          each item hand-inspected and finished with precision.
+        </p>
+      </article>
+
+      <!-- 2 Leather Dry Cleaning -->
+      <article class="service-card" data-cat="leather">
+        <div class="service-topline"></div>
+        <div class="service-icon">🧥</div>
+        <h3>Leather Dry Cleaning</h3>
+        <h4>Luxury Care for Leather & Suede</h4>
+        <p>
+          Specialized care for leather jackets, bags, and accessories using non‑abrasive, leather‑safe solutions to maintain finish, texture, and shape.
+        </p>
+      </article>
+
+      <!-- 3 Shoe Cleaning -->
+      <article class="service-card" data-cat="footwear">
+        <div class="service-topline"></div>
+        <div class="service-icon">👟</div>
+        <h3>Shoe Cleaning</h3>
+        <h4>Restore Your Sole.</h4>
+        <p>
+          Professional deep clean and rejuvenation for sneakers, leather shoes, boots, and more — cleansing, deodorizing, stain removal,
+          whitening (if needed), and optional waterproofing.
+        </p>
+      </article>
+
+      <!-- 4 Premium Laundry -->
+      <article class="service-card" data-cat="garments">
+        <div class="service-topline"></div>
+        <div class="service-icon">🫧</div>
+        <h3>Premium Laundry</h3>
+        <h4>Everyday Essentials, Expertly Treated</h4>
+        <p>
+          Fabric‑specific detergents, pH‑balanced water, and temperature‑controlled drying to extend garment life —
+          ideal for casuals, formals, linens, and kidswear.
+        </p>
+      </article>
+
+      <!-- 5 Steam Press Iron -->
+      <article class="service-card" data-cat="garments">
+        <div class="service-topline"></div>
+        <div class="service-icon">🧺</div>
+        <h3>Steam Press Iron</h3>
+        <h4>Flawlessly Pressed, Wrinkle‑Free</h4>
+        <p>
+          Crisp, crease‑free finish without fiber damage — temperature and pressure tailored to fabric for a sharp, professional look.
+        </p>
+      </article>
+
+      <!-- 6 Saree Roll Press & Polish -->
+      <article class="service-card" data-cat="garments">
+        <div class="service-topline"></div>
+        <div class="service-icon">👗</div>
+        <h3>Saree Roll Press & Polish</h3>
+        <h4>Preserve Elegance, Maintain Grace</h4>
+        <p>
+          Gentle polish, optional starch, and roll press for silk and cotton sarees to maintain structure, sheen, and longevity —
+          perfect for heirloom and premium traditional wear.
+        </p>
+      </article>
+
+      <!-- 7 Curtain Cleaning -->
+      <article class="service-card" data-cat="home">
+        <div class="service-topline"></div>
+        <div class="service-icon">🪟</div>
+        <h3>Curtain Cleaning</h3>
+        <h4>Fresh Drapes, Zero Dust</h4>
+        <p>
+          Deep cleaning with dust extraction, fabric‑safe cleaning, and odor neutralizing — freshness restored without shrinkage or fading.
+        </p>
+      </article>
+
+      <!-- 8 Carpet Cleaning -->
+      <article class="service-card" data-cat="home">
+        <div class="service-topline"></div>
+        <div class="service-icon">🧼</div>
+        <h3>Carpet Cleaning</h3>
+        <h4>Deep Clean. Allergen‑Free. Hygienic.</h4>
+        <p>
+          Industrial‑grade stain, bacteria, pet hair, and allergen removal using foam, steam, or dry compound methods based on carpet type and condition.
+        </p>
+      </article>
+
+      <!-- 9 Bag Cleaning -->
+      <article class="service-card" data-cat="leather">
+        <div class="service-topline"></div>
+        <div class="service-icon">👜</div>
+        <h3>Bag Cleaning</h3>
+        <h4>Restore the bag that carries your world.</h4>
+        <p>
+          Deep cleaning for handbags and backpacks with fabric‑safe, color‑protective techniques — linings, zips, and exteriors refreshed to like‑new.
+        </p>
+      </article>
+
+      <!-- 10 Toy Cleaning -->
+      <article class="service-card" data-cat="home">
+        <div class="service-topline"></div>
+        <div class="service-icon">🧸</div>
+        <h3>Toy Cleaning</h3>
+        <h4>Because every hug should be germ‑free.</h4>
+        <p>
+          Child‑safe, non‑toxic cleaning, sanitizing, and refreshing of plush toys — preserves softness while removing dirt and allergens.
+        </p>
+      </article>
+
+      <!-- 11 Shoe Repair -->
+      <article class="service-card" data-cat="repairs">
+        <div class="service-topline"></div>
+        <div class="service-icon">🪡</div>
+        <h3>Shoe Repair</h3>
+        <h4>Give your soles a second chance.</h4>
+        <p>
+          Sole replacements, heel fixes, stitching, and color restoration — expert cobblers extend the life of favorite pairs.
+        </p>
+      </article>
+
+      <!-- 12 Darning -->
+      <article class="service-card" data-cat="repairs">
+        <div class="service-topline"></div>
+        <div class="service-icon">🧵</div>
+        <h3>Darning</h3>
+        <h4>Fix the little things that matter most.</h4>
+        <p>
+          Seamless repairs for holes, tears, and loose threads — extend garment life without compromising look or quality.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Page CTA -->
+    <div class="container services-cta">
+      <a href="#book" class="cta-button">
+        Book Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="cta-tagline">Fabkart — Curating time for what matters most</p>
+    </div>
+  </section>
+
+  <script src="main.js" defer></script>
+</body>
+<!-- Footer will be inserted here -->
+<div id="footer-placeholder"></div>
+
+<script>
+  // Load footer dynamically
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</html>

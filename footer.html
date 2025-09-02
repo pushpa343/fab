@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabkart Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005E3A;
+            --accent: #FECF33;
+            --white: #FFFFFF;
+            --light-gray: rgba(255,255,255,0.7);
+        }
+        
+        .fabkart-footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 3rem 1rem;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            line-height: 1.2;
+        }
+        
+        .logo-main {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo-tagline {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+        
+        .footer-heading {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2rem;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(3px);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-icon {
+            color: var(--accent);
+            width: 1rem;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            color: var(--white);
+            background: rgba(255,255,255,0.1);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: var(--light-gray);
+        }
+        
+        .copyright {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-motto {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .legal-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .legal-links a:hover {
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .footer-brand {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .footer-heading {
+                text-align: center;
+            }
+            
+            .footer-heading::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .legal-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="fabkart-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Fabkart Logo - Premium Fabric Care Services">
+                    <div class="logo-text">
+                        <div class="logo-main">fabkart</div>
+                        <div class="logo-tagline">Dry Clean & Leather Care</div>
+                    </div>
+                </div>
+                <p style="color: var(--light-gray); margin-top: 0.5rem; font-size: 0.9rem;">
+                    Premium fabric care services with doorstep convenience.
+                </p>
+                
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="/services/dry-cleaning">Dry Cleaning</a></li>
+                    <li><a href="/services/leather-care">Leather Care</a></li>
+                    <li><a href="/services/shoe-cleaning">Shoe Cleaning</a></li>
+                    <li><a href="/services/premium-laundry">Premium Laundry</a></li>
+                    <li><a href="/services/saree-roll-press">Saree Roll Press</a></li>
+                    <li><a href="/services/curtain-cleaning">Curtain Cleaning</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="/membership">Membership</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/press">Press</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Support</h3>
+                <ul class="footer-links">
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/shipping">Shipping Policy</a></li>
+                    <li><a href="/returns">Returns Policy</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>support@fabkart.co.in</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <span>+91 6363 644 844</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>Bangalore, India</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© <span id="current-year">2025</span> Fabkart. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="/terms">Terms & Conditions</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/refund">Refund Policy</a>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+            <p class="footer-motto">Guardians of Fabric, Crafters of Trust</p>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Add schema.org markup
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Fabkart",
+            "url": "https://www.fabkart.co.in",
+            "logo": "https://www.fabkart.co.in/logo.png",
+            "description": "Premium fabric care services with doorstep convenience",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bangalore",
+                "addressRegion": "Karnataka",
+                "addressCountry": "India"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91 6363 644 844",
+                "contactType": "customer service",
+                "email": "support@fabkart.co.in",
+                "areaServed": "India"
+            }
+        });
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

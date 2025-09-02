@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Fabkart — Beyond Clean, A Ritual of Refinement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Scoped styles for Why Fabkart page */
+
+    .why-hero {
+      background: radial-gradient(1200px 600px at 70% -10%, rgba(0,94,58,0.10), transparent 60%),
+                  linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border-top: 2px solid var(--light-mint-green);
+      border-bottom: 2px solid var(--light-mint-green);
+      padding: 90px 0 70px;
+      overflow: hidden;
+    }
+    .why-hero .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .why-eyebrow {
+      display:inline-block; font-weight:800; letter-spacing:.4px; color:var(--deep-green);
+      background: rgba(0,94,58,.08); padding:6px 12px; border-radius:999px; margin-bottom:14px;
+    }
+    .why-hero h1 { font-size:2.4rem; color:var(--deep-green); font-weight:800; line-height:1.2; }
+    .why-hero p { color:var(--medium-gray); font-size:1.08rem; line-height:1.8; margin-top:12px; max-width: 900px; }
+    .why-hero .cta-wrap { display:flex; gap:12px; margin-top:22px; flex-wrap: wrap; }
+    .btn-solid {
+      display:inline-flex; align-items:center; gap:10px; padding:13px 24px; border-radius:999px; font-weight:700;
+      background: linear-gradient(90deg, #005E3A 0%, #008a65 100%); color:#fff; text-decoration:none; border:none;
+      box-shadow:0 8px 24px rgba(0,94,58,.25); transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .btn-solid:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,94,58,.35); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:10px; padding:12px 22px; border-radius:999px; font-weight:700;
+      border:2px solid var(--muted-teal); color:var(--muted-teal); background:#fff; text-decoration:none;
+      transition: background .25s, color .25s, transform .25s;
+    }
+    .btn-outline:hover { background: var(--muted-teal); color:#fff; transform: translateY(-2px); }
+
+    /* Value Pillars */
+    .why-pillars { padding: 70px 0; background:#fff; }
+    .section-head { text-align:center; max-width:900px; margin:0 auto 30px; }
+    .section-head h2 { color:var(--deep-green); font-size:2.0rem; font-weight:800; }
+    .section-head h2::after { content:''; display:block; width:90px; height:4px; background:var(--bright-yellow); border-radius:2px; margin:12px auto 0; }
+    .section-head p { color:var(--medium-gray); margin-top:10px; }
+    .pillar-grid {
+      max-width: 1200px; margin:0 auto; padding:0 20px;
+      display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:22px;
+    }
+    .pillar-card {
+      background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:22px; position:relative; overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.05); transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+    .pillar-card:hover { transform: translateY(-6px); box-shadow:0 16px 40px rgba(0,94,58,.12); border-color: rgba(0,94,58,.18); }
+    .pillar-topline { position:absolute; top:0; left:0; width:100%; height:5px; background: linear-gradient(90deg, #005E3A 0%, #FECF33 100%); }
+    .pillar-icon {
+      width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, #FECF33 0%, #f8e08e 100%); color:var(--deep-green);
+      font-size:26px; font-weight:800; box-shadow:0 8px 18px rgba(254,207,51,.3); margin-bottom:10px;
+    }
+    .pillar-card h3 { color:var(--deep-green); font-size:1.15rem; margin-bottom:8px; }
+    .pillar-card p { color:var(--medium-gray); line-height:1.7; margin-bottom:8px; }
+    .mini-list { list-style:none; margin:0; padding:0; }
+    .mini-list li { color:var(--dark-charcoal); padding:6px 0; }
+
+    /* Proof Band */
+    .why-proofband {
+      background: linear-gradient(135deg, rgba(217,242,230,.35) 0%, rgba(255,255,255,.9) 100%);
+      border-top:2px solid var(--light-mint-green);
+      border-bottom:2px solid var(--light-mint-green);
+      padding: 60px 0;
+    }
+    .proof-grid {
+      max-width:1100px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px;
+    }
+    .proof-tile {
+      background:#fff; border:1px solid rgba(0,94,58,.12); border-radius:14px; padding:16px; text-align:center;
+      box-shadow:0 8px 18px rgba(0,0,0,.04);
+    }
+    .proof-number { color:var(--deep-green); font-weight:800; font-size:1.5rem; display:block; }
+    .proof-note { color:var(--medium-gray); }
+
+    /* Specialty Highlights */
+    .why-highlights { padding: 60px 0; background:#fff; }
+    .highlight-row {
+      max-width:1200px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:20px;
+    }
+    .highlight {
+      background:#fff; border:1px solid rgba(0,94,58,.12); border-radius:16px; padding:18px; box-shadow:0 10px 30px rgba(0,94,58,.06);
+    }
+    .chip { display:inline-block; background:rgba(0,94,58,.08); color:var(--deep-green); font-weight:700; font-size:.9rem; padding:6px 12px; border-radius:999px; margin-bottom:8px; }
+    .highlight h4 { color:var(--deep-green); margin-bottom:8px; }
+    .highlight p { color:var(--medium-gray); line-height:1.7; }
+
+    /* Process Teaser */
+    .process-teaser {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border-top:2px solid var(--light-mint-green);
+      padding:70px 0;
+    }
+    .process-steps-mini {
+      max-width:1000px; margin:0 auto; padding:0 20px; display:grid; gap:20px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    .step-mini {
+      background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:14px; padding:18px;
+      box-shadow:0 8px 24px rgba(0,0,0,.05);
+    }
+    .step-num {
+      width:38px; height:38px; border-radius:50%; background: var(--bright-yellow); color: var(--deep-green);
+      display:flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:8px;
+      box-shadow:0 6px 12px rgba(254,207,51,.3);
+    }
+    .step-mini h5 { color:var(--deep-green); margin-bottom:6px; }
+    .step-mini p { color:var(--medium-gray); line-height:1.6; }
+
+    /* CTA */
+    .why-cta-band { text-align:center; padding: 40px 0; background:#fff; }
+    .why-cta-band .cta-tagline { color: var(--medium-gray); font-style: italic; margin-top: 8px; }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .pillar-grid, .proof-grid, .highlight-row, .process-steps-mini { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 768px) {
+      .why-hero { padding: 70px 0 50px; }
+      .why-hero h1 { font-size: 2rem; }
+    }
+    @media (max-width: 576px) {
+      .pillar-grid, .proof-grid, .highlight-row, .process-steps-mini { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Replace with your shared header include -->
+  <header class="main-header">
+        <div class="header-container">
+            <!-- Logo with Image -->
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Fabkart" class="logo-img">
+                    <div class="logo-text-container">
+                        <h1 class="logo-text">
+                            <span class="logo-fab">Fab</span><span class="logo-kart">kart</span>
+                        </h1>
+                        <p class="tagline">Where Every Fabric Finds Its Perfect Care</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation with Icons -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-concierge-bell nav-icon"></i>
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="services.html"><i class="fas fa-tshirt"></i> Dry Cleaning</a>
+                            <a href="services.html"><i class="fas fa-soap"></i> Laundry</a>
+                            <a href="services.html"><i class="fas fa-fan"></i> Saree Roll Press</a>
+                            <a href="services.html"><i class="fas fa-rug"></i> Carpet Cleaning</a>
+                            <a href="services.html"><i class="fas fa-cut"></i> Alterations</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html#how-it-works" class="nav-link">
+                            <i class="fas fa-cogs nav-icon"></i>
+                            <span>How It Works</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class="nav-link">
+                            <i class="fas fa-tags nav-icon"></i>
+                            <span>Pricing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="why us.html" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span>Why Fabkart</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="footer.html#contact" class="nav-link">
+                            <i class="fas fa-phone-alt nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <button class="btn-primary">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Schedule Pickup</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Add this right after your navigation in index.html -->
+    
+    </header>
+  <!-- Hero -->
+  <section class="why-hero">
+    <div class="container">
+      <span class="why-eyebrow">Why Fabkart</span>
+      <h1>Beyond Clean, Beyond Convenience — A Ritual of Refinement</h1>
+      <p>
+        For those who value time, quality, and the planet, Fabkart blends artisanal expertise with cutting‑edge processes to revive, protect, and elevate every piece — so each thread returns better, brighter, and beautifully finished.
+      </p>
+      <div class="cta-wrap">
+        <a href="#book" class="btn-solid">Book Pickup</a>
+        <a href="services.html" class="btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Pillars -->
+  <section class="why-pillars">
+    <div class="section-head">
+      <h2>What Sets Fabkart Apart</h2>
+      <p>Care that respects craftsmanship — and routines that respect time.</p>
+    </div>
+    <div class="pillar-grid">
+      <article class="pillar-card">
+        <div class="pillar-topline"></div>
+        <div class="pillar-icon">🧵</div>
+        <h3>Couture‑Grade Care, Everyday</h3>
+        <p>Fabric‑first methods tailored to fiber, weave, and construction — from Italian wool suits to handloom silks.</p>
+        <ul class="mini-list">
+          <li>Hand inspection & finishing</li>
+          <li>Designer‑safe protocols</li>
+          <li>No shortcuts</li>
+        </ul>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-topline"></div>
+        <div class="pillar-icon">⚙️</div>
+        <h3>Technology That Respects Textiles</h3>
+        <p>International‑grade solvents, pH‑balanced programs, and temperature control preserve color, texture, and fit.</p>
+        <ul class="mini-list">
+          <li>Precision steaming</li>
+          <li>Calibrated pressure</li>
+          <li>Color‑safe care</li>
+        </ul>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-topline"></div>
+        <div class="pillar-icon">🫧</div>
+        <h3>Hygienic & Allergen‑Aware</h3>
+        <p>Contact‑safe handling and allergen reduction — ideal for bedding, kidswear, and sensitive skin.</p>
+        <ul class="mini-list">
+          <li>Odor neutralization</li>
+          <li>Low‑residue rinses</li>
+          <li>Fresh, soft finish</li>
+        </ul>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-topline"></div>
+        <div class="pillar-icon">🌱</div>
+        <h3>Eco‑Conscious by Design</h3>
+        <p>Water‑smart cycles, energy‑efficient machines, and biodegradable detergents for responsible luxury.</p>
+        <ul class="mini-list">
+          <li>Lower footprint</li>
+          <li>Responsible solvents</li>
+          <li>Eco packaging</li>
+        </ul>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-topline"></div>
+        <div class="pillar-icon">🧑‍🎨</div>
+        <h3>Artisans Meet Modern Science</h3>
+        <p>Stain‑lifting, color revival, lace reblocking, and saree roll‑pressing restore shape, drape, and sheen.</p>
+        <ul class="mini-list">
+          <li>Heirloom‑safe methods</li>
+          <li>Delicate detailing</li>
+          <li>Longer wear life</li>
+        </ul>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-topline"></div>
+        <div class="pillar-icon">⌛</div>
+        <h3>Luxury That Gives Time Back</h3>
+        <p>Doorstep pickup, transparent tracking, and dependable 24–48h turnaround reclaim hours every week.</p>
+        <ul class="mini-list">
+          <li>Concierge pickup</li>
+          <li>Priority handling</li>
+          <li>Reliable ETAs</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Proof Band -->
+  <section class="why-proofband">
+    <div class="section-head">
+      <h2>Proof You Can Feel</h2>
+      <p>Sharper lines, truer colors, softer hand‑feel — and more time for what matters.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-tile">
+        <span class="proof-number">24–48h</span>
+        <span class="proof-note">Premium turnaround</span>
+      </div>
+      <div class="proof-tile">
+        <span class="proof-number">Fabric‑first</span>
+        <span class="proof-note">Programs by material</span>
+      </div>
+      <div class="proof-tile">
+        <span class="proof-number">Eco‑smart</span>
+        <span class="proof-note">Less water, more care</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Highlights -->
+  <section class="why-highlights">
+    <div class="section-head">
+      <h2>Signature Fabkart Touches</h2>
+      <p>Details that elevate daily living.</p>
+    </div>
+    <div class="highlight-row">
+      <div class="highlight">
+        <span class="chip">Finishes</span>
+        <h4>Aromatherapy Options</h4>
+        <p>Lavender for linens, citrus for daywear, or fragrance‑free — curated to your routine and sensitivity.</p>
+      </div>
+      <div class="highlight">
+        <span class="chip">Occasion‑Ready</span>
+        <h4>Photograph‑Perfect Press</h4>
+        <p>Crisp silhouettes with calibrated steam and pressure for events and important meetings.</p>
+      </div>
+      <div class="highlight">
+        <span class="chip">Wardrobe Care</span>
+        <h4>Closet Serenity</h4>
+        <p>Coordinated folding, breathable packaging, and moth‑safe care for a calm, organized start to the day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Teaser -->
+  <section class="process-teaser">
+    <div class="section-head">
+      <h2>Experience the Fabkart Process</h2>
+      <p>Seamless steps — from pickup to perfection.</p>
+    </div>
+    <div class="process-steps-mini">
+      <div class="step-mini">
+        <div class="step-num">1</div>
+        <h5>Concierge Pickup</h5>
+        <p>Schedule via app, site, or call — note delicates, urgent, or special finishes.</p>
+      </div>
+      <div class="step-mini">
+        <div class="step-num">2</div>
+        <h5>Fabric‑First Care</h5>
+        <p>Material‑specific cleaning and finishing by expert technicians and artisans.</p>
+      </div>
+      <div class="step-mini">
+        <div class="step-num">3</div>
+        <h5>Refined Return</h5>
+        <p>Pristine, pressed, and packaged — delivered within 24–48h.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="why-cta-band">
+    <a href="#book" class="btn-solid">Book Fabkart</a>
+    <p class="cta-tagline">Fabkart — Curating time for what matters most</p>
+  </section>
+
+  <!-- Replace with your shared footer include -->
+  <footer class="fabkart-footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>© Fabkart. Curating time for what matters most.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="main.js"></script>
+  <script>
+    // Optional: reveal on scroll
+    (function() {
+      const targets = document.querySelectorAll('.pillar-card, .proof-tile, .highlight, .step-mini');
+      if (!targets.length) return;
+      targets.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(12px)'; });
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.transition = 'opacity 600ms ease, transform 600ms ease';
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      targets.forEach(el => obs.observe(el));
+    })();
+  </script>
+  <div id="footer-placeholder"></div>
+
+<script>
+  // Load footer dynamically
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</body>
+</html>
